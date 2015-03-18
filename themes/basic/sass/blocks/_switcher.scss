@@ -1,0 +1,22 @@
+.b-switcher {
+	display: inline-block;
+
+
+	margin-right: 20px;
+	
+
+	.block-inner {
+		width: 100px;
+		height: 40px;
+		
+		background: url("../images/switcher.png") right center no-repeat;
+
+		cursor: pointer;
+	}	
+
+	&.active {
+		.block-inner {
+			background-position: left center;
+		}
+	}
+}

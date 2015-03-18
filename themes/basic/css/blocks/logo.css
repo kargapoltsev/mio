@@ -1,0 +1,15 @@
+/* line 1, ../../sass/blocks/logo.scss */
+.b-logo {
+  height: 40px;
+}
+/* line 4, ../../sass/blocks/logo.scss */
+.b-logo a {
+  display: block;
+}
+/* line 7, ../../sass/blocks/logo.scss */
+.b-logo a img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=logo.css.map */

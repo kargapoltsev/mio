@@ -1,0 +1,179 @@
+// Custom
+// ------
+// This file is used to define custom overrides and
+// style changes to be used for building your theme.
+// If you wish to use the SCSS syntax, please use this.
+// Documentation: http://sass-lang.com/docs/yardoc/_index.html
+
+// Import variables and mixins to be used.
+@import "_config.sass";
+
+@import "blocks/logo";
+@import "blocks/menu-catalog";
+@import "blocks/slider";
+@import "blocks/map";
+@import "blocks/copyrights";
+@import "blocks/switcher";
+@import "blocks/contacts";
+@import "blocks/social";
+
+// @import "blocks/*.scss";
+
+@import "views/puzzle";
+
+
+body, html {
+	position: relative;
+	height: 100%;
+	background: #fff;
+	z-index: 0;
+}
+
+
+table.page {
+	width: 100%;
+	height: 100%;
+
+	td {
+		vertical-align: top;
+	}
+}
+
+.w {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+
+	.left {
+		@include transition(all 0.5s);
+
+		background: #1C2225;
+
+		&.show {
+			display: table-cell;
+			width: 100%;
+
+			.b {
+				width: 100%;
+
+				.block-inner {
+					float: none !important;
+					margin: auto !important;
+				}
+			}
+
+			.b-menu-catalog {
+				li {
+					text-align: center;
+				}
+			}
+
+			.b-social {
+				text-align: center;
+			}
+		}
+	}
+	
+	.right {
+		&.hide {
+			display: none;
+			width: 0%;
+		}
+	}
+}
+
+@include media(0) { 
+	.w {
+		.left {
+			display: none;
+
+
+		}
+
+		.right {
+			width: 100%;
+		}
+	}
+}
+
+@include media(720px) {
+	.w {
+		.left {
+
+		}
+
+		.right {
+			
+		}
+	}
+}
+
+@include media(1200px) {
+	.w {
+		.left {
+			display: table-cell;
+			width: 33.3333333333%;
+
+			.b-switcher {
+				display: none;
+			}
+
+			.b-social {
+				padding-right: 50px;
+			}
+		}
+
+		.right {
+			width: 66.6666666666%;
+
+			.b-switcher {
+				display: none;
+			}
+
+			.b-logo {
+				margin-left: -270px;
+			}
+		}
+	}
+}
+
+
+.w-header {
+	padding: 30px 0;
+	background: #1C2225;
+	
+	.left,
+	.right 
+	{
+		vertical-align: middle;
+		height: 100px;
+	}
+}
+
+
+.w-footer {
+	.left,
+	.right 
+	{
+		vertical-align: middle;
+	}
+
+	@include media(0px) {
+		.b-copyright {
+			p {
+				text-align: center;
+			}
+		}
+	}
+
+	@include media(720px) {
+		.b-copyright {
+			padding-left: 50px;
+
+			p {
+				text-align: left;
+			}
+		}
+	}
+}
+

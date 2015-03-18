@@ -1,0 +1,44 @@
+@include all‐social‐sprites;
+
+.b-social {
+	height: 70px;
+	width: 100%;
+
+	text-align: right;
+	
+	.item {
+		display: inline-block;
+		margin: 10px 5px;	
+		
+
+		a {
+			@include transition(all 0.5s);
+
+			display: block;
+			width: 44px;
+			height: 44px;
+			
+			opacity: 1;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	.item-1 a {
+		background: transparent url('../images/social/vk.png') left top no-repeat;
+	}
+
+	.item-2 a {
+		background: transparent url('../images/social/facebook.png') left top no-repeat;
+	}
+
+	.item-4 a {
+		background: transparent url('../images/social/insta.png') left top no-repeat;
+	}
+
+	.item-3 a {
+		background: transparent url('../images/social/twitter.png') left top no-repeat;
+	}
+}

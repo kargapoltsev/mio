@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,OAAQ;EACP,MAAM,EAAE,IAAI;;;AAEZ,SAAE;EACD,OAAO,EAAE,KAAK;;;AAEd,aAAI;EACH,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,IAAI",
+"sources": ["../../sass/blocks/logo.scss"],
+"names": [],
+"file": "logo.css"
+}

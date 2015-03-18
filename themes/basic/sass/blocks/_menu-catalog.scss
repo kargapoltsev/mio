@@ -1,0 +1,42 @@
+.b-menu-catalog {
+	background: #181C1E;
+	border-bottom: 1px solid #414649;
+
+	.block-inner {
+		width: 280px;
+		float: right;
+	}
+
+	ul {
+		li {
+			padding: 0;
+			margin: 0;
+
+			border-bottom: 1px solid #414649;
+
+			list-style: none;
+			line-height: 55px;
+
+			&.last {
+				border: none;
+			}
+
+			& > a {
+				@include transition(all 0.5s);
+
+				margin-left: 20px;
+
+				color: #898989;
+				font-size: 16px;
+				text-decoration: none;
+
+			}
+
+			&:hover {
+				& > a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
