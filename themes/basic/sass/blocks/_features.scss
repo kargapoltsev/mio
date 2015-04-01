@@ -1,0 +1,39 @@
+.b-features {
+	.block-inner {
+		@include outer-container;
+	}
+
+	.item {
+
+		.title {
+			padding: 20px 0 20px 60px;
+
+			color: #000;
+			font-size: 16px;
+			line-height: 18px;
+			font-weight: bold;
+		}
+
+		@include media(480px) {
+			@include span-columns(4);
+		}
+	}
+
+	.item-1 {
+		.title {
+			background: transparent url('../images/free.png') left center no-repeat;
+		}	
+	}
+	
+	.item-2 {
+		.title {
+			background: transparent url('../images/portmone.png') left center no-repeat;
+		}	
+	}
+
+	.item-3 {
+		.title {
+			background: transparent url('../images/cube.png') left center no-repeat;
+		}	
+	}
+}

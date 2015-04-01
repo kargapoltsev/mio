@@ -1,39 +1,51 @@
-<?php // dpm($page); ?>
+<?php  // dpm($page); ?>
 
 <table class="page">
 
   <!-- HEADER -->
   <tr class="w w-header">
-    <td class="left">
+    <td class="p p-left">
       <div class="b b-switcher"><div class="block-inner"></div></div>
 
     </td>
-    <td class="right">
+    <td class="p p-right">
+    <div class="header-inner">
 
-      <div class="b b-switcher"><div class="block-inner"></div></div>
+        <div class="b b-switcher"><div class="block-inner"></div></div>
 
-      <?php if ($logo): ?>
-        <div class="b b-logo">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
-          </a>
-        </div>
-      <?php endif; ?>
+        <?php if ($logo): ?>
+          <div class="b b-logo">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+            </a>
+          </div>
+        <?php endif; ?>
+
+        <div class="b b-feedback"></div>
+        <div class="b b-search"></div>
+        <?php print render($page['header']['system_main-menu']); ?>
+      </div>
+
+
     </td>
   </tr>
 
   <!-- MAIN -->
   <tr class="w w-main">
-    <td class="left">
+    <td class="p p-left">
       <?php print render($page["left"]); ?>
     </td>
-    <td class="right">
+    <td class="p p-right">
       <?php if($is_front): ?>
         <div class="w w-slider">
           <div class="b b-slider">
-            <div class="foo">
-              Slider
+            <div class="block-inner owl-carousel">
+              <div class="slide slide-1"><img src="/sites/all/themes/basic/images/slide-1.jpg" alt=""></div>
+              <div class="slide slide-2"><img src="/sites/all/themes/basic/images/slide-1.jpg" alt=""></div>
+              <div class="slide slide-3"><img src="/sites/all/themes/basic/images/slide-1.jpg" alt=""></div>
             </div>
+
+            <!-- <div class="foo"></div> -->
           </div>
         </div>
       <?php endif; ?>
@@ -41,7 +53,17 @@
 
       <div id="main" class="clearfix">
 
-        <section id="content">
+        <div class="b b-categories-elect clearfix">
+          <div class="view">
+            <div class="e"></div>
+            <div class="e"></div>
+            <div class="e"></div>
+            <div class="e"></div>
+            <div class="e"></div>
+          </div>
+        </div>
+        
+        <section id="content" class="clearfix">
 
           <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
             <div id="content-header">
@@ -51,6 +73,9 @@
               <?php if ($page['highlighted']): ?>
                 <div id="highlighted"><?php print render($page['highlighted']) ?></div>
               <?php endif; ?>
+
+
+
 
               <?php print render($title_prefix); ?>
 
@@ -77,37 +102,23 @@
             <?php print render($page['content']) ?>
           </div>
 
-          <?php print $feed_icons; ?>
-
-          <div class="view">
-            <div class="e">
-              <div class="f"></div>
-              <div class="f"></div>
+          <div class="b b-features">
+            <div class="block-innter">
+              <div class="item item-1">
+                <div class="title">Выгодные цены и скидки</div>
+                <div class="body">Только у нас полные коллекций керамической плитки, мозаики и клинкерной плитки.</div>
+              </div>
+              <div class="item item-2">
+                <div class="title">Полные коллекции</div>
+                <div class="body">Только у нас полные коллекций керамической плитки, мозаики и клинкерной плитки. </div>
+              </div>
+              <div class="item item-3">
+                <div class="title">3D визуализация</div>
+                <div class="body">Только у нас полные коллекций керамической плитки, мозаики и клинкерной плитки.</div>
+              </div>
             </div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
-            <div class="e"></div>
           </div>
+
 
 
         </section> <!-- /content-inner /content -->
@@ -131,10 +142,9 @@
 
   <!-- FOOTER -->
   <tr class="w w-footer">
-    <td class="left">
-      <div class="b b-contacts">
+    <td class="p p-left">
+      <?php print render($page['footer']['block_1']);?>
 
-      </div>
       <div class="b b-social">
         <div class="block-inner">
           <ul class="items" >
@@ -146,9 +156,9 @@
         </div>
       </div>
     </td>
-    <td class="right">
+    <td class="p p-right">
       <div class="b b-map">
-      <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=9gpaSAArhFaKzZPbP3wV9fRHeHOQJgc_&width=auto&height=335"></script>
+        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=9gpaSAArhFaKzZPbP3wV9fRHeHOQJgc_&width=auto&height=335"></script>
       </div>
 
       <div class="b b-copyright">
@@ -156,8 +166,13 @@
           © Миокерамика. Все права защищены.
         </p>
       </div>
-    </td>
-  </tr>
+
+<!--       <div class="b b-weblogika">
+        <p><a href="http://weblogika.ru">Создание сайтов</a> - <img src="/sites/all/themes/custom/images/w.png" alt=""/>    Веб Логика</p>
+      </div>
+    -->
+  </td>
+</tr>
 </table>
 
 

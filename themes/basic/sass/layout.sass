@@ -23,7 +23,8 @@
 
 
 // Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.)
-#main
+#main,
+.header-inner
   @include outer-container
   margin: auto
   width: $max-width
@@ -31,10 +32,14 @@
   @if $responsive
     @include media(max-width $max-width)
       width: auto
+    @include media(0px)
+      margin: 0 10px
     @include media(720px)
       margin-left: $gutter
+      margin-right: 0
     @include media(1200px)
       margin-left: 2*$gutter
+      margin-right: 0
 
 
 #content

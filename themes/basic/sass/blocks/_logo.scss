@@ -1,6 +1,30 @@
+// .b-logo {
+// 	display: inline-block;
+// 	height: 41px;
+// 	display: none;
+
+// 	a {
+// 		display: block;
+
+// 		img {
+// 			max-width: 100%;
+// 			height: auto;
+// 		}
+// 	}
+// }
+
 .b-logo {
-	display: inline-block;
-	height: 40px;
+	height: 41px;
+	
+	@include media(0) {
+		margin: auto;
+		text-align: center;		
+	}
+
+	@include media(960px) {
+		display: inline-block;
+	}
+
 
 	a {
 		display: block;

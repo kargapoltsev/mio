@@ -1,10 +1,9 @@
 .view {
 
 	.e {
-		outline: 1px dashed #000;
 		height: 140px;
 		margin-bottom: 20px;
-
+		background: #ccc;
 	}
 
 	@include media(720px) {

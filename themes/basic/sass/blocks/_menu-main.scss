@@ -1,0 +1,47 @@
+.b-menu-main {
+	@include media(0) {
+		margin: auto;
+	}
+
+
+	@include media(960px) {
+		display: inline-block;	
+	}
+
+	ul {
+		@include media(0) {
+			text-align: center;
+		}
+
+		@include media(960px) {
+			text-align: right;
+		}
+		
+		li {
+			list-style: none;
+			line-height: 40px;
+
+			a {
+				@include transition(all 0.5s);
+
+				color: #fff;
+				font-size: 16px; 
+				border-bottom: 2px solid #1C2225;
+
+				text-decoration: none;
+
+				&:hover {
+					border-color: #fff;
+				}
+			}
+			
+			@include media(0) {
+				text-align: center;
+			}
+
+			@include media(720px) {
+				display: inline-block;
+			}
+		}
+	}
+}

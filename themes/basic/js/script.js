@@ -17,22 +17,22 @@
     Drupal.behaviors.my_custom_behavior = {
         attach: function (context, settings) {
 
-            // $(".view-slider .view-content").owlCarousel({
-            //     navigation: true,
-            //     pagination: false,
-            //     slideSpeed: 300,
-            //     paginationSpeed: 400,
-            //     singleItem: true,
-            //     navigationText: [,],
-            // });
+            $(".b-slider .block-inner").owlCarousel({
+                navigation: false,
+                pagination: false,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true,
+                navigationText: [,],
+            });
 
             $(".b-switcher").click(function () {
                 $(this).each(function() {
                     $(this).toggleClass("active");
                 });
                 
-                $(".w .left").toggleClass("show");
-                $(".w .right").toggleClass("hide");
+                $(".p-left").toggleClass("show");
+                $(".p-right").toggleClass("hide");
             });
 
 

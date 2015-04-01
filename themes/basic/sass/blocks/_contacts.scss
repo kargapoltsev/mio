@@ -5,4 +5,48 @@
 	background: #181C1E;
 	border-top: 1px solid #414649;
 	border-bottom: 1px solid #414649;
+
+	@include media(0) {
+		margin: auto;
+	}
+
+
+	@include media(960px) {
+		display: inline-block;
+		margin-left: 20px;	
+	}
+
+	.block-inner {
+		margin-top: 30px;
+		color: #fff;
+
+		@include media(0) {
+			
+		}		
+
+		@include media(720px) {
+			width: 280px;
+			float: right;
+		}
+
+		.block-title {
+			color: #FFF;
+			font-size: 22px;
+			line-height: 26px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.content {
+			padding-left: 30px;
+
+			p {
+				margin: 0;
+			}
+
+			p:nth-child(2n) {
+				color: #ED1C24;
+			}
+		}
+	}
 }

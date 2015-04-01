@@ -1,6 +1,8 @@
 .b-switcher {
-	display: inline-block;
 
+	@include media(960px) {
+		display: inline-block;	
+	}
 
 	margin-right: 20px;
 	
@@ -9,6 +11,8 @@
 		width: 100px;
 		height: 40px;
 		
+		margin: auto;
+
 		background: url("../images/switcher.png") right center no-repeat;
 
 		cursor: pointer;

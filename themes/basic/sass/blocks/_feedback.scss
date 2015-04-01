@@ -1,0 +1,15 @@
+.b-feedback {
+	@include media(0) {
+		margin: auto;
+	}
+
+	
+	@include media(960px) {
+		display: inline-block;	
+	}
+
+	width: 40px;
+	height: 40px;
+
+	background: url("../images/feedback.png") center center no-repeat;	
+}

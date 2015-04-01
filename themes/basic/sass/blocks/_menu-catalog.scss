@@ -9,6 +9,8 @@
 
 	ul {
 		li {
+			@include transition(all 0.5s);
+			
 			padding: 0;
 			margin: 0;
 
@@ -17,26 +19,48 @@
 			list-style: none;
 			line-height: 55px;
 
+			opacity: 0.5;
+
 			&.last {
 				border: none;
 			}
 
 			& > a {
-				@include transition(all 0.5s);
 
-				margin-left: 20px;
+				margin-left: 60px;
 
-				color: #898989;
+				color: #FFF;
 				font-size: 16px;
 				text-decoration: none;
 
 			}
 
 			&:hover {
-				& > a {
-					color: #fff;
-				}
+				opacity: 1;
 			}
+
+			&:nth-child(1) {
+				background: url("../images/menu-catalog/1.png") 20px center no-repeat;
+			}
+			&:nth-child(2) {
+				background: url("../images/menu-catalog/2.png") 20px center no-repeat;
+			}
+			&:nth-child(3) {
+				background: url("../images/menu-catalog/3.png") 20px center no-repeat;
+			}
+			&:nth-child(4) {
+				background: url("../images/menu-catalog/4.png") 20px center no-repeat;
+			}
+			&:nth-child(5) {
+				background: url("../images/menu-catalog/5.png") 20px center no-repeat;
+			}
+			&:nth-child(6) {
+				background: url("../images/menu-catalog/6.png") 20px center no-repeat;
+			}
+			&:nth-child(7) {
+				background: url("../images/menu-catalog/7.png") 20px center no-repeat;
+			}
+
 		}
 	}
 }
